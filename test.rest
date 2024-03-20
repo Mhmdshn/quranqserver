@@ -1,0 +1,126 @@
+GET http://localhost:8000/api/users
+###
+GET http://localhost:8000/api/posts
+###
+
+POST http://localhost:8000/api/user/create
+Content-Type: application/json
+
+{
+    "email": "muhammadhshaan@gmail.com",
+    "password": "muhammadhshaan@gmail.com",
+    "nid" : "A119031",
+    "name": "Shaan",
+    "gender": "M",
+    "dob": "02/05/1989",
+    "phone": 7511910,
+    "currentisland": "Ga. Maamendhoo",
+    "currentaddress": "Sosunvilla",
+    "registeredisland": "Ga. Maamendhoo",
+    "registeredaddress": "Sosunvilla",
+    "country": "Maldives",
+    "useridcopy": "idlink"
+}
+
+###
+
+GET http://localhost:8000/api/likes
+###
+GET http://localhost:8000/api/like/check/3/2
+###
+
+
+
+GET http://localhost:8000/api/publicdata/2
+
+###
+POST http://localhost:8000/api/like/create
+Content-Type: application/json
+
+{
+        "likeFrom": "3",
+        "likeTo" : "2"
+}
+
+###
+
+POST http://localhost:8000/api/post/create
+Content-Type: application/json
+
+{
+        "userId": 2,
+        "nickname" : "mee2",
+        "bio" : "meddddde",
+        "livingIn" : "mee",
+        "isPublic"  : "yes"
+}
+
+
+###
+
+POST http://localhost:8000/api/user/create
+Content-Type: application/json
+
+{
+                "email": "muhammadhshaan@gmail.com",
+                "password": "muhammadhshaan@gmail.com",  
+                "nid"  : "A119031",   
+                "name"   : "Mohamed Shaan Ahmed", 
+                "gender"  : "M",
+                "dob"     : "02/05/1989", 
+                "phone"   : "9423609", 
+                "currentisland" : "Ga. Maamendhoo",
+                "currentaddress" : "Sosunvilla",
+                "registeredisland" : "Ga. Maamendhoo",
+                "registeredaddress" : "Sosunvilla",
+                "country": "Maldives",
+                "useridcopy": "useridlink"
+}
+###
+POST http://localhost:8000/api/save/create
+Content-Type: application/json
+
+{
+        "saveFrom": "3",
+        "saveTo" : "7"
+}
+###
+GET http://localhost:8000/api/save/savefrom/9
+
+###
+POST http://localhost:8000/api/save/check?saveFrom=3&saveTo=2
+###
+POST http://localhost:8000/api/save/check?saveFrom=3&saveTo=4
+###
+POST http://localhost:8000/api/save/delete
+Content-Type: application/json
+
+{
+        "saveFrom": "3",
+        "saveTo" : "7"
+}
+###
+GET http://localhost:8000/api/postslist
+###
+GET http://localhost:8000/api/ask/26
+###
+POST http://localhost:8000/api/ask/create 
+Content-Type: application/json
+
+{
+        "askFrom": "4",
+        "askTo" : "26"
+}
+###
+POST http://localhost:8000/api/grant/create 
+Content-Type: application/json
+
+{
+        "grantFrom": "4",
+        "grantTo" : "26"
+}
+###
+GET http://localhost:8000/api/askfrom/26
+###
+GET http://localhost:8000/api/askto/26
+###
