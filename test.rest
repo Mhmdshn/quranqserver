@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+POST http://localhost:8000/api/live/create
+Content-Type: application/json
+
+{
+      "qid": 20001  
+}
+
+###
 GET http://localhost:8000/api/users
 ###
 GET http://localhost:8000/api/posts
