@@ -4,10 +4,12 @@
 
 
 
-
-
-
-
+GET http://localhost:8000/api/getquestions/10001/20050
+###
+GET http://localhost:8000/api/questions
+###
+GET http://localhost:8000/api/live
+###
 POST http://localhost:8000/api/live/create
 Content-Type: application/json
 

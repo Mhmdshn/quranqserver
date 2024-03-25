@@ -39,7 +39,8 @@ Route::get('/test', function (Request $request) {
 Route::get('/live', [LiveController::class, 'index']);
 Route::post('/live/create', [LiveController::class, 'create']);
 
-
+Route::get('/questions', [QuestionController::class, 'index']);
+Route::get('/getquestions/{fid}/{tid}', [QuestionController::class, 'getQuestionsBetween']);
 
 // Retrieve a specific post by ID
 // Route::get('/post/{id}', function ($id) {

@@ -13,8 +13,15 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
-            $table->string('sv')->unique();
+            $table->integer('juz');
+            $table->integer('sura_number');
+            $table->string('sura_name_ar');
+            $table->integer('aya_number');
+            $table->string('verse_id');
+            $table->string('verse_id2');
+            $table->integer('page');
             $table->unsignedBigInteger('vid');
+            $table->text('first_verse');
             $table->timestamps();
         });
     }

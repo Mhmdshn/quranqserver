@@ -13,12 +13,20 @@ class QuestionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, Response $response)
+    public function index()
     {
-        $questions = Question::all();
-        return $response->json($questions, 200);
+        $live = Question::all();
+        return response()->json($live);
     }
 
+    public function getQuestionsBetween($fid, $tid)
+{
+    $questions = Question::where('vid', '>=', $fid)
+                         ->where('vid', '<=', $tid)
+                         ->get();
+    
+    return response()->json($questions, 200);
+}
     /**
      * Show the form for creating a new resource.
      */
